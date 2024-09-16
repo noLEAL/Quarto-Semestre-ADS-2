@@ -10,21 +10,13 @@ def horariouser(textohora: str):
     horario = textohora[:2]
     minuto = textohora[-2:]
 
-    print("filtro para pegar apenas os dois primeiros e ultimos caracteres // ainda uma string", horario, minuto)
-
     horarioint = int(horario)
     minutoint = int(minuto)
 
-    print(horarioint, minutoint)
-    print(type(horarioint), type(minutoint))
+    resultado = horarioint * 60
+    resultado = resultado + minutoint
 
-    print("conversäao")
-
-    minutos = horarioint * 60
-    print(horario)
-    print(type(horario))
-
-    return
+    return resultado
 
 print("Informe o horario desejado: [HORAS:MINUTOS]")
-horariouser(str(input()))
+print(horariouser(str(input("Quantidade de minutos: "))))
