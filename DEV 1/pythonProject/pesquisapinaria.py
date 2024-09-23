@@ -52,6 +52,8 @@ while lopcontrol:
     print("O Qual numero deseja pesquisar:")
     objdefinido = int(input('--->'))
 
+
+
     test = tiraduvida(agendauser)
     print(test)
 
