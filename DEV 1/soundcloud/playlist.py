@@ -1,6 +1,6 @@
 from datetime import datetime, time
-
 from musica import Musica
+from exterminador import Exterminador
 
 
 class Playlist:
@@ -12,8 +12,9 @@ class Playlist:
     nr_likes = int
     duracao = time
 
-    def __init__(self):
+    def __init__(self, titulo: str):
         """Documentacao"""
+        self.titulo = titulo
 
     def like(self):
         """Documentaöao"""
@@ -29,4 +30,5 @@ class Playlist:
 
     def __str__(self):
         """Documentacao"""
-        return 'String'
+
+        return print("Titulo:", self.titulo)
