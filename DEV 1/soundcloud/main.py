@@ -1,8 +1,11 @@
 from playlist import Playlist
 
 
-objeto = Playlist("Rock")
+objeto = Playlist("Nome", "Descrição")
 
-print(objeto.titulo)
-objeto.__str__()
+objeto.like()
+
+print(objeto.__str__())
+
+
 

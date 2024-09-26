@@ -1,24 +1,24 @@
 from datetime import datetime, time
 from musica import Musica
-from exterminador import Exterminador
-
 
 class Playlist:
     """Documentaöao comtem catributos das playlist e seus metodos"""
 
-    titulo = str
-    descricao = str
-    data_cricao = datetime
-    nr_likes = int
-    duracao = time
-
-    def __init__(self, titulo: str):
+    def __init__(self, titulo: str, descricao=None, duracao=None):
         """Documentacao"""
         self.titulo = titulo
+        self.descricao = descricao
+        self.data_cricao = datetime.now()
+        self.nr_likes = 0
+        self.duracao = duracao
+        self.armazen = []
 
     def like(self):
         """Documentaöao"""
-        return "boleano"
+
+        self.nr_likes += 1
+
+        return True
 
     def add_musica(self, musica: Musica):
         """Documentacao"""
@@ -31,4 +31,10 @@ class Playlist:
     def __str__(self):
         """Documentacao"""
 
-        return print("Titulo:", self.titulo)
+        to_string = f"=========================================================="
+        to_string += f"\nTitulo:{self.titulo}  \nDescrição:{self.descricao}"
+        to_string += f"\nData de Criação:{self.data_cricao} \nNumero de Likes:{self.nr_likes}"
+        to_string += f"\nDuracao:{self.duracao} \nArmazen:{self.armazen}"
+        to_string += f"\n=========================================================="
+
+        return to_string
