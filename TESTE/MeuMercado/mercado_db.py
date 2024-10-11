@@ -1,5 +1,5 @@
 import sqlite3
-import messagebox
+#import messagebox
 
 
 class Sistemaderegistro:
@@ -37,13 +37,15 @@ class Sistemaderegistro:
         self.conn.commit()
 
         # Mensagem de sucesso
-        messagebox.showinfo('Sucesso', 'Produtos padrão cadastrados com sucesso')
+        print("Produtos padrão cadastrados com sucesso")
+        #messagebox.showinfo('Sucesso', 'Produtos padrão cadastrados com sucesso')
 
     def register_product(self, produto):
         """Insere um novo produto no banco de dados"""
         self.c.execute("INSERT INTO produtos(nome, tipo, valor, estoque) VALUES (?,?,?,?)",produto)
         self.conn.commit()
-        messagebox.showinfo('deu certo porra', 'Produto cadastrado com sucesso')
+        #messagebox.showinfo('deu certo porra', 'Produto cadastrado com sucesso')
+        print("Produto cadastrado com sucesso")
 
     def view_products(self):
         """Seleciona todos os produtos da tabela"""
@@ -58,18 +60,21 @@ class Sistemaderegistro:
         self.c.execute("SELECT * FROM produtos WHERE id=?", (id,))
         dados = self.c.fetchall()
         print(f'ID:{dados[0]} |nome:{dados[0]} |tipo:{dados[0]} |valor:{dados[0]} |estoque:{dados[0]}')
-        messagebox.showinfo('deu certo', 'Busca realizada')
+        #messagebox.showinfo('deu certo', 'Busca realizada')
+        print("Busca realizada")
 
     def update_product(self, produto):
         """Atualiza os dados de um produto pelo ID"""
         query = "UPDATE produtos SET nome = ?, tipo = ?, valor = ?, estoque = ? WHERE id = ?"
         self.c.execute(query, produto)
         self.conn.commit()
-        messagebox.showinfo('deu certo', 'Update realizado')
+        #messagebox.showinfo('deu certo', 'Update realizado')
+        print("Update realizado")
 
     def delete_product(self,id_produto):
         """Deleta um produto pelo ID"""
         self.c.execute("DELETE FROM produtos WHERE id=?", (id_produto,))
         self.conn.commit()
-        messagebox.showinfo('deu certo', 'delete realizado')
+        #messagebox.showinfo('deu certo', 'delete realizado')
+        print("Delete realizado")
 
