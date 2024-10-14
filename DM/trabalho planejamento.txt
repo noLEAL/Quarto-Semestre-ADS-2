@@ -1,0 +1,37 @@
+
+Você está realizando o planejamento de um aplicativo chamado SouFitness voltado para o acompanhamento das atividades físicas e da saúde dos usuários. 
+
+O aplicativo deve manter um histórico das horas de atividade física e dos sinais vitais do usuário (batimentos cardíacos, horas de sono, etc.). 
+
+Realize o planejamento do app preenchendo os itens abaixo:
+
+a) Para quais tipos de dispositivos móveis seu aplicativo se destina (smartphone, tablet, smartwatch, smart TV, etc.)?smartphone, smartwatch
+
+b) Para quais sistemas operacionais você pretende lançar o aplicativo (Android, Android Wear, iOS, watchOS, Tizen, etc.)?Android, Android Wear, iOS, watchOS
+
+c) Quais versões do sistema operacional serão suportadas pelo aplicativo? As mais recentes, presando pela segurança dos dados e a qualidade do aplicativo.
+
+d) Qual será o tipo de desenvolvimento (nativo, híbrido, web ou progressive web app)? Por que? híbrido, por questões de custos e visando atender a maior quantidade de pessoas dentro do aplicativo, desenvolver nativamente para cada plataforma aumenta os custos.
+
+e) Quais recursos dos aparelhos (sensores, rede, etc.) serão utilizados no projeto do app? Justifique
+AcelerômetroSensor -> Medir o pace, e ajudar na precissão da localização do usuario
+Relógio -> Marcar o tempo de corrida, e mostrar a hora do usuario 
+Sensor de giroscópio - ajudar na precissão da localização do usuario
+Sensor de localização - ajudar na precissão da localização do usuario
+Sensor de campo magnético - ajudar na precissão da localização do usuario
+Sensor de Orientação - ajudar na precissão da localização do usuario
+Pedômetro - Medir o pace, e ajudar na precissão da localização do usuario
+Termômetro - Medir temperatura do corpo da pessoa, para emitir alertas
+
+f) Que outras funcionalidades podem ser úteis em um app desse tipo que busca controlar a saúde do usuário?
+Rastreamento de Atividades: Registro de exercícios como corrida, caminhada, ciclismo e musculação, com opções de tempo, distância e calorias queimadas.
+Planos de Treino Personalizados
+Rastreamento de Nutrição
+Metas e Desempenho
+Desafios e Competição
+Integração com Wearables
+Vídeos e Tutoriais
+Comunidade e Redes Sociais
+Notificações e Lembretes
+Relatórios e Estatísticas
+Treinos Guiados

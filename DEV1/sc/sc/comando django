@@ -1,0 +1,13 @@
+python manage.py shell
+
+python manage.py runserver
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+django-admin startapp (nome do app) -- criando app
+
+unico e exclusivo é Clase.object.get(pk=*) - retorna somente um objeto
+
+retornar mais de um objeto usar  Clase.object.filter(nome=*****)
