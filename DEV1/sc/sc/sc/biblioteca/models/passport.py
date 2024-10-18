@@ -8,3 +8,5 @@ class Passport(models.Model):
     issue_date = models.DateField(verbose_name="Data de Criação")
     expiration_date = models.DateField(verbose_name="Data de Vencimento")
     owner = models.OneToOneField(Person, on_delete=models.CASCADE, primary_key=True)
+
+# relação com a classe person 1 / 1
