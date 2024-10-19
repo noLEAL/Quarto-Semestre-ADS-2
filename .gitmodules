@@ -1,0 +1,3 @@
+[submodule "SEC/T1-Assinatura-digital_Bruno-Leal"]
+	path = SEC/T1-Assinatura-digital_Bruno-Leal
+	url = https://github.com/VirtusV01/Encryption-with-Python-Encrypting-data-with-key-pairs.git
