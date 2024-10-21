@@ -46,6 +46,9 @@ def menu():
                 case '4':
                     print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
                     print("Opção 4 Cadastrar produtos")
+                    ##
+                    ##Necessario colocar senha para seguir os requisitos
+                    ##
                     local_nome = input("Digite o nome do produto que deseja cadastrar:")
                     local_tipo = input("Digite o tipo do produto que deseja cadastrar:")
                     local_valor = input("Digite o valor do produto que deseja cadastrar:")
@@ -55,6 +58,9 @@ def menu():
                 case '5':
                     print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
                     print("Opção 5 Excluir produto")
+                    ##
+                    ##Necessario colocar senha para seguir os requisitos
+                    ##
                     codigo = input(id("Digite o codigo do produto que deseja excluir:"))
                     sistema.delete_product(codigo)
                     print("Produto excluido acima ^")
@@ -62,13 +68,24 @@ def menu():
                 case '6':
                     print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
                     print("Opção 6 Alterar valor de produto")
-                    local_id = input("Digite o codigo do produto que deseja cadastrar:")
-                    local_valor = input("Digite o valor do produto que deseja cadastrar:")
-                    sistema.update_product(local_id, local_valor)
+                    ##
+                    ##Necessario colocar senha para seguir os requisitos
+                    ##
+                    local_id = input("Digite o codigo do produto que deseja alterar:")
+                    local_valor = input("Digite o valor que você deseja para o produto em questão:")
+                    local_op = "valor"
+                    sistema.update_product(local_id, local_valor,local_op)
                     print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
                 case '7':
                     print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
                     print("Opção 7 Alterar estoque de produto")
+                    ##
+                    ##Necessario colocar senha para seguir os requisitos
+                    ##
+                    local_id = input("Digite o codigo do produto que deseja alterar:")
+                    local_valor = input("Digite o valor que você deseja para o produto em questão:")
+                    local_op = "estoque"
+                    sistema.update_product(local_id, local_valor,local_op)
                     print("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
                 case 'SAIR':
                     print("\nEncerrando o programa...")

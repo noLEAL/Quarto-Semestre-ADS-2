@@ -85,20 +85,23 @@ class Sistemaderegistro:
         except sqlite3.Error as e:
             print(f"Erro ao procurar produto pelo nome: {e}")
 
-    def update_product(self, produto, valor, operacao):
+    def update_product(self, id_produto, valor, operacao):
         """Atualiza os dados de um produto pelo ID"""
         try:
+            print("entrou em upp")
             match operacao:
                 case 'valor':
-                    query = "UPDATE produtos SET nome = ?, tipo = ?, valor = ?, estoque = ? WHERE id = ?"
-                    self.c.execute(query, produto)
+                    print("att valor ")
+                    query = "UPDATE produtos SET valor = ? WHERE id = ?"
+                    self.c.execute(query, (valor, id_produto))
                     self.conn.commit()
                     #messagebox.showinfo('deu certo', 'Update realizado')
                     print("Update do valor realizado")
 
                 case 'estoque':
-                    query = "UPDATE produtos SET nome = ?, tipo = ?, valor = ?, estoque = ? WHERE id = ?"
-                    self.c.execute(query, produto)
+                    print("att valor ")
+                    query = "UPDATE produtos SET estoque = ? WHERE id = ?"
+                    self.c.execute(query, (valor, id_produto))
                     self.conn.commit()
                     # messagebox.showinfo('deu certo', 'Update realizado')
                     print("Update do estoque realizado")

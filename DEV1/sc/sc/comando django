@@ -6,7 +6,9 @@ python manage.py makemigrations
 
 python manage.py migrate
 
-django-admin startapp (nome do app) -- criando app
+django-admin startproject <nome_projeto>
+
+django-admin startapp maincloud -- criando app
 
 unico e exclusivo é Clase.object.get(pk=*) - retorna somente um objeto
 
