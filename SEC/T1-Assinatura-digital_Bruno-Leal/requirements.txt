@@ -1,0 +1,5 @@
+pycryptodome>=3.10.1
+
+reportlab~=4.2.5
+pillow~=11.0.0
+pypdf~=5.0.1

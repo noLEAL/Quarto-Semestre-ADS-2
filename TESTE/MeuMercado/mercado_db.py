@@ -1,8 +1,4 @@
 import sqlite3
-
-from django.utils.text import camel_case_to_spaces
-
-
 #import messagebox
 
 
@@ -42,7 +38,7 @@ class Sistemaderegistro:
             ]
 
             # Executa a inserção de todos os produtos
-            self.c.executemany("INSERT INTO produtos(nome, tipo, valor, estoque) VALUES (?,?,?,?)", (produtos,))
+            self.c.executemany("INSERT INTO produtos(nome, tipo, valor, estoque) VALUES (?,?,?,?)", produtos)
             self.conn.commit()
 
             # Mensagem de sucesso

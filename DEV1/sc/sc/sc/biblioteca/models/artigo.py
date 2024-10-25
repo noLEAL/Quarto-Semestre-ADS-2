@@ -2,9 +2,12 @@ from django.db import models
 from .reporter import Reporter
 
 class Artigo(models.Model):
+
     titulo = models.CharField(max_length=100)
     publicado = models.DateField()
     reporter = models.ForeignKey(Reporter, on_delete=models.SET_NULL, null=True, blank=True)
+
+        #pode ser realizadas novas validçoes
 
 #on_delete=models.SET_NULL - FOI DEFINIDO PARA QUE QUANDO O REPORTER FOR DELETADO AUTOMATICAMENTE IRA SETAR NULL
 ## relação com a classe person 1 / n
